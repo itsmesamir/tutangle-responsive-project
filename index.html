@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
                 <div class="float_left logo">
                     <img src="./images/logo.png" alt="logo">
                 </div>
-                <div class="float_right search_part">
+                <div class="search_part">
                     <form>
                         <div class="float_left search_left">
                             <img src="./images/search_left.png" alt="" class="search_input_left_end">
@@ -28,7 +29,7 @@
                             </div>
                             <img src="./images/search_cancel_icon.png" alt="cancel" class="cancel_icon">
                             <img src="./images/search_right_with_icon.png" alt="search icon" class="search_icon">
-                            <div class="clearfix"></div>
+                            <!-- <div class="clearfix"></div> -->
 
                             <!-- <div class="clearfix"></div> -->
                         </div>
@@ -42,7 +43,7 @@
                         <div class="clearfix"></div>
                     </form>
                 </div>
-                <!-- <div class="clearfix"></div> -->
+
             </div>
             <div class="float_right header_right">
                 <div class="name">
@@ -62,20 +63,25 @@
         </div>
         <!-- nav-bar-second -->
         <div class="second_nav">
-            <div class="menu float_left">
+            <div class="hamburger_icon">
+                <a id="ham_icon" href="#"><img src="./images/edit_icon_inactive.png" alt="hamburger_icon"></a>
+            </div>
+
+            <div class="menu">
                 <ul>
                     <li><a href="#">Create New Entry</a></li>
                     <li><a href="#">My Topic Boxes</a></li>
                     <li><a href="#">Friends</a></li>
                     <li><a href="#">Invite New Member</a></li>
+                    <div class="clearfix"></div>
                 </ul>
             </div>
             <!-- <div notification portion> -->
-            <div class=" notification float_right">
-                <div class="invite_box float_left">
+            <div class=" notification">
+                <div class="invite_box">
                     <a href="#">Topic Boxes Invites - <span>2</span></a>
                 </div>
-                <div class="friend_box float_right">
+                <div class="friend_box">
                     <a href="#">Friend Requests - <span>0</span></a>
                 </div>
             </div>
@@ -85,7 +91,7 @@
         <!-- main portion -->
 
         <div class="main_portion">
-            <div class="col_1 float_left">
+            <div class="col_1">
                 <div class="top_portion">
                     <div class="top_title">
                         Recent Searches
@@ -137,26 +143,29 @@
                 </div>
             </div>
             <!-- main column  -->
-            <div class="col_2 float_left">
+            <div class="col_2">
+
                 <div class="col_2_title">
                     Entries
                 </div>
                 <div class="top_entries">
-                    <div class="tab_section float_left">
+                    <div class="tab_section">
                         <p>All Entries</p>
                         <div class="tab_list">
                             <ul>
-                                <li class="active"><a href="#">All Members</a></li>
-                                <li><a href="#">Friends</a></li>
+                                <li class="active "><a href="#">All Members</a></li>
+                                <li class="friends"><a href="#">Friends</a></li>
+                                <div class="clearfix"></div>
                             </ul>
                         </div>
                     </div>
-                    <div class="tab_section float_right">
+                    <div class="tab_section tab_section1">
                         <p>Subscribed</p>
                         <div class="tab_list">
                             <ul>
                                 <li><a href="#">New Entries</a></li>
                                 <li><a href="#">New Comments</a></li>
+                                <div class="clearfix"></div>
                             </ul>
                         </div>
                     </div>
@@ -170,7 +179,7 @@
                                 <img src="./images/pic_one.png" alt="member image">
                             </span>
                             <!-- <p> -->
-                            <span class="members_title"><a href="#">Day for Night by Francois Truffaut, a ground breaking film</a></span>
+                            <p class="members_title"><a href="#">Day for Night by Francois Truffaut, a ground breaking film</a></p>
                             <!-- </p> -->
                             <p>
                                 <span class="member_name">
@@ -245,9 +254,7 @@
                             <span class="float_left">
                                 <img src="./images/pic_four.png" alt="profile image">
                             </span>
-                            <p>
-                                <span class="members_title"><a href="#">The Meaning of Night. Dark Book but incredibly well written.</a></span>
-                            </p>
+                            <p class="members_title"><a href="#">The Meaning of Night. Dark Book but incredibly well written.</a></p>
                             <p>
                                 <span class="member_name">
                                     by <a href="#">John-Peter Moise</a>
@@ -294,7 +301,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="col_3 float_right">
+            <div class="clear"></div>
+            <div class="col_3">
                 <div class="col3_down_portion">
                     <div class="top_title">
                         Video Tutorials
@@ -358,6 +366,14 @@
             </div>
         </div>
     </div>
+    <!-- <Script>
+        var icon = document.getElementById('ham_icon');
+        icon.addEventListener('click', function() {
+            var menu = document.querySelector('.menu');
+            menu.style.display = "block";
+        })
+    </Script> -->
 </body>
+
 
 </html>
